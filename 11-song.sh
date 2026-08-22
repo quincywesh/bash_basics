@@ -1,9 +1,9 @@
- while [ true ]; do
+while [ true ]; do
 
-    # Ask the user to choose a programming language
-    read -p "Choose a programming language: python, java, sql, or q to end > " language
+    # Choose from programming languages or operating systems
+    read -p "Choose python, java, sql, windows, mac, linux, or q to end > " choice
 
-    case $language in
+    case $choice in
         python|Python)
             echo "Python is great for scripting and data analysis."
             ;;
@@ -13,16 +13,24 @@
         sql|SQL)
             echo "SQL is used to work with databases."
             ;;
+        windows|Windows)
+            echo "Windows is widely used on personal computers."
+            ;;
+        mac|Mac)
+            echo "macOS is Apple's operating system for Mac computers."
+            ;;
+        linux|Linux)
+            echo "Linux is a popular open-source operating system."
+            ;;
         q|Q)
-            echo "Thanks for choosing a programming language!"
+            echo "Thanks for making your selections!"
             exit 0
             ;;
         *)
-            echo "That is not one of the listed programming languages."
+            echo "That is not one of the listed choices."
             ;;
     esac
 
 done
 
-# exercise completed: Changed the input question and case
-# statement from musical notes to programming languages.
+# Merge conflict resolved by combining both branches.
