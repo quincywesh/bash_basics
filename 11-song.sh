@@ -1,44 +1,28 @@
-#!/bin/sh
+ while [ true ]; do
 
+    # Ask the user to choose a programming language
+    read -p "Choose a programming language: python, java, sql, or q to end > " language
 
-while [ true ]; do
-
-   # you can show a prompt with the read command
-   read -p "Do rae mi fa so la ti do? (q to end) > " note
-
-case $note in
-   # each case matches a pattern
-   do|Do)
-      echo "Doe a deer a female deer"
-      ;;   
-   rae|Rae)
-      echo "Ray a drop of golden sun"
-      ;;
-   mi|Mi)
-      echo "Me a name a call myself"
-      ;;
-   fa|Fa)
-      echo "Far a long long way to run"
-      ;;
-   so|So)
-      echo "So a note that follows fa"
-      ;;
-   la|La)
-      echo "La a note that follow so"
-      ;;
-   ti|ta)
-      echo "Tea I drink with jam and bread"
-      ;;
-   q)
-      echo "Hope you enjoyed the sound of music"
-      exit 0
-      ;;
-   *) 
-      echo "Not a note"
-      ;;
-esac
+    case $language in
+        python|Python)
+            echo "Python is great for scripting and data analysis."
+            ;;
+        java|Java)
+            echo "Java is commonly used for object-oriented programming."
+            ;;
+        sql|SQL)
+            echo "SQL is used to work with databases."
+            ;;
+        q|Q)
+            echo "Thanks for choosing a programming language!"
+            exit 0
+            ;;
+        *)
+            echo "That is not one of the listed programming languages."
+            ;;
+    esac
 
 done
 
-# exercise: Change the input question and case 
-# statement to another theme. 
+# exercise completed: Changed the input question and case
+# statement from musical notes to programming languages.
